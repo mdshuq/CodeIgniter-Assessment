@@ -92,7 +92,16 @@
           <tbody>
 
             <?php 
-            $count = 1;
+            
+            if ($this->uri->segment(2) != 0) {
+              $count = $this->uri->segment(2) + 1;
+            }
+            else{
+              $count = 1;
+            }
+
+            // $count = 1;
+
             // if($fetch_data->num_rows() > 0)
             if($count > 0)
             {
